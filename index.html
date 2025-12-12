@@ -99,11 +99,15 @@
 </footer>
 
 <script>
-  function toggleMenuMobile() {
-      const menu = document.getElementById("menu-mobile");
-      menu.classList.toggle("menu-mobile-ativo");
-  }
+const btn = document.querySelector(".hamburger");
+const menuMobile = document.querySelector(".menu-mobile");
+
+btn.addEventListener("click", () => {
+    menuMobile.classList.toggle("active");
+});
 </script>
+
 
 </body>
 </html>
+
