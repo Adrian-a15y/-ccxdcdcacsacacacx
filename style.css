@@ -583,6 +583,7 @@ body {
     .cards-pizza {
         flex-direction: column;
         align-items: center;
+        display: flex;
     }
     .grid-pizzas {
         grid-template-columns: 1fr;
@@ -608,4 +609,5 @@ body {
         font-size: 26px;
     }
 }
+
 
