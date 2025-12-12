@@ -14,11 +14,12 @@
         <img src="https://i.ibb.co/ycP76wK8/IMG-20251011-WA0000.jpg" alt="Logo Pizza do Chefe">
     </div>
 
-    <!-- BOTÃO HAMBÚRGUER (MOBILE) -->
-    <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div class="hamburger" onclick="toggleMenu-mobile()">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
 
     <!-- MENU DESKTOP -->
@@ -99,13 +100,11 @@
 </footer>
 
 <script>
-    const btn = document.querySelector(".hamburger");
-    const menuMobile = document.querySelector(".menu-mobile");
-
-    btn.addEventListener("click", () => {
-        menuMobile.classList.toggle("active");
-    });
+  function toggleMenuMobile(){
+      const menu = document.getElementById("menu-mobile");
+  }
 </script>
 
 </body>
 </html>
+
