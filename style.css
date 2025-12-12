@@ -40,20 +40,20 @@ body {
     transform: translateY(3px);
 }
 
-.menu a:active{
+.menu a:active {
     transform: translateY(4px);
     box-shadow: 0 0 0 #5da62a;
 }
 
 .principal {
     position: relative;
-    height: 100vh; 
+    height: 100vh;
     background-image: url("https://i.ibb.co/k2n9q3CM/Adobe-Express-file.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
-    align-items: flex-start; 
+    align-items: flex-start;
     color: white;
     text-align: center;
 }
@@ -68,7 +68,7 @@ body {
 .slogan {
     position: relative;
     z-index: 1;
-    margin-top: 50px; 
+    margin-top: 50px;
 }
 
 .slogan h1 {
@@ -132,13 +132,12 @@ body {
     border-radius: 50px;
     font-weight: bold;
     transition: 0.3s;
-
 }
 
 .pizza-card button:hover {
-  transform: translateY(3px);
-  background-color: #8be63f;
-  color: #000;
+    transform: translateY(3px);
+    background-color: #8be63f;
+    color: #000;
 }
 
 .sobre-nos {
@@ -224,7 +223,7 @@ body {
 
 .botao-pedido a {
     background-color: #8be63f;
-    box-shadow: 3px 3px 0 #5da62a, 0 6px 7px rgba(0, 0, 0, 0.25);
+    box-shadow: 3px 3px 0 #5da62a, 0 6px 7px rgba(0,0,0,0.25);
     text-decoration: none;
     padding: 18px 60px;
     border-radius: 50px;
@@ -246,15 +245,15 @@ body {
     box-shadow: 0 3px 0 #4d9124, 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-.botao-pedido a:active{
+.botao-pedido a:active {
     transform: translateY(4px);
     box-shadow: 0 0 0 #4d9124;
 }
 
 .promocoes-container {
-    padding: 100px 20px; 
+    padding: 100px 20px;
     text-align: center;
-    min-height: 100vh; 
+    min-height: 100vh;
     box-sizing: border-box;
 }
 
@@ -339,14 +338,14 @@ body {
 
 .historia {
     max-width: 1000px;
-    margin: 100px auto; 
+    margin: 100px auto;
     padding: 20px;
     text-align: center;
 }
 
 .historia h1 {
     font-size: 2.5em;
-    color: #b83a3a; 
+    color: #b83a3a;
     margin-bottom: 20px;
 }
 
@@ -378,17 +377,24 @@ body {
     transform: scale(1.03);
 }
 
-.menu-mobile-btn {
+.hamburger {
     display: none;
-    font-size: 32px;
+    flex-direction: column;
     cursor: pointer;
-    color: white;
+    gap: 6px;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 4px;
+    background: white;
+    border-radius: 5px;
 }
 
 .menu-mobile {
     display: none;
     position: absolute;
-    top: 80px;
+    top: 90px;
     right: 20px;
     background-color: #a7ff4f;
     padding: 15px;
@@ -396,6 +402,11 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     flex-direction: column;
     gap: 10px;
+    z-index: 999;
+}
+
+.menu-mobile.active {
+    display: flex;
 }
 
 .menu-mobile a {
@@ -410,8 +421,6 @@ body {
 .menu-mobile a:hover {
     background: #8be63f;
 }
-
-/* -------------------- PÁGINA DE CONTATO -------------------- */
 
 .contato-container {
     max-width: 800px;
@@ -493,121 +502,109 @@ body {
     }
 }
 
-/* BOTÃO HAMBÚRGUER */
-.hamburger {
-    display: none; 
-    flex-direction: column;
-    cursor: pointer;
-    gap: 6px;
-}
-
-.hamburger span {
-    width: 30px;
-    height: 4px;
-    background: white;
-    border-radius: 5px;
-    display: block;
-}
-
-
 @media (max-width: 768px) {
-    .desktop-menu {
+
+    .menu {
         display: none;
     }
 
     .hamburger {
         display: flex;
     }
-    
-    .menu-mobile-btn {
-        display: block;
-    }
+
     .topo {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 15px 0;
-    }
-    .menu {
         flex-direction: row;
-        gap: 20px;
-        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 15px 20px;
     }
+
     .principal {
         height: 65vh;
         padding: 20px;
     }
+
     .slogan h1 {
         font-size: 42px;
     }
+
     .slogan p {
         font-size: 18px;
     }
+
     .cards-pizza {
         gap: 20px;
     }
+
     .grid-pizzas {
         grid-template-columns: repeat(2, 1fr);
         padding: 25px;
     }
+
     .galeria-historia {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 425px) {
+
     .logo img {
         width: 80px;
         height: 70px;
     }
 
-    .hamburger {
-        display: flex;
-    }
-    
-    .menu-mobile-btn {
-        display: block;
-    }
     .menu {
         display: none;
     }
+
+    .hamburger {
+        display: flex;
+    }
+
     .principal {
         height: 55vh;
     }
+
     .slogan h1 {
         font-size: 32px;
     }
+
     .slogan p {
         font-size: 15px;
     }
+
     .cards-pizza {
         flex-direction: column;
         align-items: center;
         display: flex;
     }
+
     .grid-pizzas {
         grid-template-columns: 1fr;
         padding: 10px;
         gap: 20px;
     }
+
     .promo {
         height: 160px;
     }
+
     .promo-titulo {
         font-size: 18px;
     }
+
     .promo-desc {
         font-size: 14px;
     }
+
     .promo-preco {
         font-size: 16px;
     }
+
     .galeria-historia {
         grid-template-columns: 1fr;
     }
+
     .historia h1 {
         font-size: 26px;
     }
 }
-
-
