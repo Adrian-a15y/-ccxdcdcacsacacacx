@@ -377,24 +377,26 @@ body {
     transform: scale(1.03);
 }
 
+/* BOTÃO HAMBÚRGUER */
 .hamburger {
-    display: none;
+    display: none; 
     flex-direction: column;
     cursor: pointer;
     gap: 6px;
 }
 
-.hamburger span {
+.hamburger div {
     width: 30px;
     height: 4px;
     background: white;
     border-radius: 5px;
 }
 
+/* MENU MOBILE */
 .menu-mobile {
     display: none;
     position: absolute;
-    top: 90px;
+    top: 80px;
     right: 20px;
     background-color: #a7ff4f;
     padding: 15px;
@@ -402,11 +404,7 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     flex-direction: column;
     gap: 10px;
-    z-index: 999;
-}
-
-.menu-mobile.active {
-    display: flex;
+    z-index: 10;
 }
 
 .menu-mobile a {
@@ -421,7 +419,6 @@ body {
 .menu-mobile a:hover {
     background: #8be63f;
 }
-
 .contato-container {
     max-width: 800px;
     margin: 60px auto;
@@ -608,3 +605,4 @@ body {
         font-size: 26px;
     }
 }
+
