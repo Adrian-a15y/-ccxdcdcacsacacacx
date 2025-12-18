@@ -13,14 +13,12 @@
         <img src="https://i.ibb.co/ycP76wK8/IMG-20251011-WA0000.jpg">
     </div>
 
-    <!-- HAMBÚRGUER (APARECE NO MOBILE) -->
     <div class="hamburger">
         <span></span>
         <span></span>
         <span></span>
     </div>
 
-    <!-- MENU DESKTOP -->
     <nav class="menu">
         <a href="index.html">Início</a>
         <a href="cardapio.html">Cardápio</a>
@@ -29,7 +27,6 @@
         <a href="contato.html">Contato</a>
     </nav>
 
-    <!-- MENU MOBILE -->
     <div class="menu-mobile">
         <a href="index.html">Início</a>
         <a href="cardapio.html">Cardápio</a>
@@ -100,9 +97,7 @@
 
     </div>
 
-    <div class="botao-pedido">
-        <a href="">Faça seu pedido aqui</a>
-    </div>
+        <a href="#" class="botao-pedido" onclick="abrirFormulario()">Fazer pedido</a>
 
 </section>
 
@@ -119,6 +114,42 @@
     <p>&copy; 2025 Pizza do Chefe - Todos os direitos reservados</p>
 </footer>
 
+
+    <div class="modal" id="modalPedido">
+    <div class="modal-conteudo">
+        <span class="fechar" onclick="fecharFormulario()">×</span>
+
+        <h2>Fazer Pedido</h2>
+        
+        <form>
+    <label>Nome</label>
+    <input type="text" id="nome" placeholder= "Digite seu nome" required>
+
+    <label>Telefone</label>
+    <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+
+
+    <label>Endereço</label>
+    <input type="text" placeholder = "Rua, número, bairro" required>
+            
+     <label>Forma de pagamento:</label>
+            <select class="modalPedido" required>
+                <option value="">Selecione...</option>
+                <option>Dinheiro físico</option>
+                <option>Cartão de credito</option>
+                <option>Cartão de débito</option>
+                <option>Pix</option>
+            </select>
+
+    <label>Pedido</label>
+    <textarea rows="4" placeholder="Ex: Pizza Calabresa grande..." required></textarea>
+
+    <button type="submit">Enviar Pedido</button>
+</form>
+
+    </div>
+    </div>
+
 <script>
 const btn = document.querySelector(".hamburger");
 const menuMobile = document.querySelector(".menu-mobile");
@@ -126,7 +157,16 @@ const menuMobile = document.querySelector(".menu-mobile");
 btn.addEventListener("click", () => {
     menuMobile.classList.toggle("active");
 });
+    
+    function abrirFormulario() {
+    document.getElementById("modalPedido").style.display = "flex";
+}
+
+function fecharFormulario() {
+    document.getElementById("modalPedido").style.display = "none";
+}
 </script>
 
 </body>
 </html>
+
